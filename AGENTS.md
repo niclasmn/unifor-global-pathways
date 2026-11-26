@@ -28,3 +28,11 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Application architecture
+- Keep institutional chrome in the shared Shell and page experiences in focused pumi modules, so all routes preserve the PDF's visual system.
+- Use PumiProvider with versioned browser storage only for the explicitly requested local demonstration; never represent the profile switcher as real authentication or store personal student data.
+- Keep business-rule helpers in lib/pumi/data.ts and test governance transitions and legal thresholds; no official minimum PMG has been supplied, so never invent an approval threshold.
+- Publish only Marketing-approved local content to the demo public feed; pending drafts must remain outside public views.
+- Unnest opportunity detail routes from the catalogue so detail pages do not depend on a catalogue Outlet.
+- Use the shared focus-trapping Modal for local workflow dialogs so keyboard focus and Escape work consistently.

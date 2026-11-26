@@ -10,33 +10,219 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AcessibilidadeRouteImport } from './routes/acessibilidade'
+import { Route as ArrivalGuideRouteImport } from './routes/arrival-guide'
+import { Route as ComparadorRouteImport } from './routes/comparador'
+import { Route as ContatosRouteImport } from './routes/contatos'
+import { Route as DocentesRouteImport } from './routes/docentes'
+import { Route as GestaoRouteImport } from './routes/gestao'
+import { Route as GuiasRouteImport } from './routes/guias'
+import { Route as MarketingRouteImport } from './routes/marketing'
+import { Route as MinhaDriRouteImport } from './routes/minha-dri'
+import { Route as OportunidadesRouteImport } from './routes/oportunidades'
+import { Route as PrivacidadeRouteImport } from './routes/privacidade'
+import { Route as QuizRouteImport } from './routes/quiz'
+import { Route as SobreRouteImport } from './routes/sobre'
+import { Route as OportunidadesIdRouteImport } from './routes/oportunidades_.$id'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AcessibilidadeRoute = AcessibilidadeRouteImport.update({
+  id: '/acessibilidade',
+  path: '/acessibilidade',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ArrivalGuideRoute = ArrivalGuideRouteImport.update({
+  id: '/arrival-guide',
+  path: '/arrival-guide',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ComparadorRoute = ComparadorRouteImport.update({
+  id: '/comparador',
+  path: '/comparador',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContatosRoute = ContatosRouteImport.update({
+  id: '/contatos',
+  path: '/contatos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DocentesRoute = DocentesRouteImport.update({
+  id: '/docentes',
+  path: '/docentes',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GestaoRoute = GestaoRouteImport.update({
+  id: '/gestao',
+  path: '/gestao',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GuiasRoute = GuiasRouteImport.update({
+  id: '/guias',
+  path: '/guias',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MarketingRoute = MarketingRouteImport.update({
+  id: '/marketing',
+  path: '/marketing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MinhaDriRoute = MinhaDriRouteImport.update({
+  id: '/minha-dri',
+  path: '/minha-dri',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OportunidadesRoute = OportunidadesRouteImport.update({
+  id: '/oportunidades',
+  path: '/oportunidades',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacidadeRoute = PrivacidadeRouteImport.update({
+  id: '/privacidade',
+  path: '/privacidade',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const QuizRoute = QuizRouteImport.update({
+  id: '/quiz',
+  path: '/quiz',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SobreRoute = SobreRouteImport.update({
+  id: '/sobre',
+  path: '/sobre',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OportunidadesIdRoute = OportunidadesIdRouteImport.update({
+  id: '/oportunidades_/$id',
+  path: '/oportunidades/$id',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/acessibilidade': typeof AcessibilidadeRoute
+  '/arrival-guide': typeof ArrivalGuideRoute
+  '/comparador': typeof ComparadorRoute
+  '/contatos': typeof ContatosRoute
+  '/docentes': typeof DocentesRoute
+  '/gestao': typeof GestaoRoute
+  '/guias': typeof GuiasRoute
+  '/marketing': typeof MarketingRoute
+  '/minha-dri': typeof MinhaDriRoute
+  '/oportunidades': typeof OportunidadesRoute
+  '/privacidade': typeof PrivacidadeRoute
+  '/quiz': typeof QuizRoute
+  '/sobre': typeof SobreRoute
+  '/oportunidades/$id': typeof OportunidadesIdRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/acessibilidade': typeof AcessibilidadeRoute
+  '/arrival-guide': typeof ArrivalGuideRoute
+  '/comparador': typeof ComparadorRoute
+  '/contatos': typeof ContatosRoute
+  '/docentes': typeof DocentesRoute
+  '/gestao': typeof GestaoRoute
+  '/guias': typeof GuiasRoute
+  '/marketing': typeof MarketingRoute
+  '/minha-dri': typeof MinhaDriRoute
+  '/oportunidades': typeof OportunidadesRoute
+  '/privacidade': typeof PrivacidadeRoute
+  '/quiz': typeof QuizRoute
+  '/sobre': typeof SobreRoute
+  '/oportunidades/$id': typeof OportunidadesIdRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/acessibilidade': typeof AcessibilidadeRoute
+  '/arrival-guide': typeof ArrivalGuideRoute
+  '/comparador': typeof ComparadorRoute
+  '/contatos': typeof ContatosRoute
+  '/docentes': typeof DocentesRoute
+  '/gestao': typeof GestaoRoute
+  '/guias': typeof GuiasRoute
+  '/marketing': typeof MarketingRoute
+  '/minha-dri': typeof MinhaDriRoute
+  '/oportunidades': typeof OportunidadesRoute
+  '/privacidade': typeof PrivacidadeRoute
+  '/quiz': typeof QuizRoute
+  '/sobre': typeof SobreRoute
+  '/oportunidades_/$id': typeof OportunidadesIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/acessibilidade'
+    | '/arrival-guide'
+    | '/comparador'
+    | '/contatos'
+    | '/docentes'
+    | '/gestao'
+    | '/guias'
+    | '/marketing'
+    | '/minha-dri'
+    | '/oportunidades'
+    | '/privacidade'
+    | '/quiz'
+    | '/sobre'
+    | '/oportunidades/$id'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/acessibilidade'
+    | '/arrival-guide'
+    | '/comparador'
+    | '/contatos'
+    | '/docentes'
+    | '/gestao'
+    | '/guias'
+    | '/marketing'
+    | '/minha-dri'
+    | '/oportunidades'
+    | '/privacidade'
+    | '/quiz'
+    | '/sobre'
+    | '/oportunidades/$id'
+  id:
+    | '__root__'
+    | '/'
+    | '/acessibilidade'
+    | '/arrival-guide'
+    | '/comparador'
+    | '/contatos'
+    | '/docentes'
+    | '/gestao'
+    | '/guias'
+    | '/marketing'
+    | '/minha-dri'
+    | '/oportunidades'
+    | '/privacidade'
+    | '/quiz'
+    | '/sobre'
+    | '/oportunidades_/$id'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AcessibilidadeRoute: typeof AcessibilidadeRoute
+  ArrivalGuideRoute: typeof ArrivalGuideRoute
+  ComparadorRoute: typeof ComparadorRoute
+  ContatosRoute: typeof ContatosRoute
+  DocentesRoute: typeof DocentesRoute
+  GestaoRoute: typeof GestaoRoute
+  GuiasRoute: typeof GuiasRoute
+  MarketingRoute: typeof MarketingRoute
+  MinhaDriRoute: typeof MinhaDriRoute
+  OportunidadesRoute: typeof OportunidadesRoute
+  PrivacidadeRoute: typeof PrivacidadeRoute
+  QuizRoute: typeof QuizRoute
+  SobreRoute: typeof SobreRoute
+  OportunidadesIdRoute: typeof OportunidadesIdRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +234,123 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/acessibilidade': {
+      id: '/acessibilidade'
+      path: '/acessibilidade'
+      fullPath: '/acessibilidade'
+      preLoaderRoute: typeof AcessibilidadeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/arrival-guide': {
+      id: '/arrival-guide'
+      path: '/arrival-guide'
+      fullPath: '/arrival-guide'
+      preLoaderRoute: typeof ArrivalGuideRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/comparador': {
+      id: '/comparador'
+      path: '/comparador'
+      fullPath: '/comparador'
+      preLoaderRoute: typeof ComparadorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contatos': {
+      id: '/contatos'
+      path: '/contatos'
+      fullPath: '/contatos'
+      preLoaderRoute: typeof ContatosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/docentes': {
+      id: '/docentes'
+      path: '/docentes'
+      fullPath: '/docentes'
+      preLoaderRoute: typeof DocentesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gestao': {
+      id: '/gestao'
+      path: '/gestao'
+      fullPath: '/gestao'
+      preLoaderRoute: typeof GestaoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/guias': {
+      id: '/guias'
+      path: '/guias'
+      fullPath: '/guias'
+      preLoaderRoute: typeof GuiasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/marketing': {
+      id: '/marketing'
+      path: '/marketing'
+      fullPath: '/marketing'
+      preLoaderRoute: typeof MarketingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/minha-dri': {
+      id: '/minha-dri'
+      path: '/minha-dri'
+      fullPath: '/minha-dri'
+      preLoaderRoute: typeof MinhaDriRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/oportunidades': {
+      id: '/oportunidades'
+      path: '/oportunidades'
+      fullPath: '/oportunidades'
+      preLoaderRoute: typeof OportunidadesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacidade': {
+      id: '/privacidade'
+      path: '/privacidade'
+      fullPath: '/privacidade'
+      preLoaderRoute: typeof PrivacidadeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/quiz': {
+      id: '/quiz'
+      path: '/quiz'
+      fullPath: '/quiz'
+      preLoaderRoute: typeof QuizRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sobre': {
+      id: '/sobre'
+      path: '/sobre'
+      fullPath: '/sobre'
+      preLoaderRoute: typeof SobreRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/oportunidades_/$id': {
+      id: '/oportunidades_/$id'
+      path: '/oportunidades/$id'
+      fullPath: '/oportunidades/$id'
+      preLoaderRoute: typeof OportunidadesIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AcessibilidadeRoute: AcessibilidadeRoute,
+  ArrivalGuideRoute: ArrivalGuideRoute,
+  ComparadorRoute: ComparadorRoute,
+  ContatosRoute: ContatosRoute,
+  DocentesRoute: DocentesRoute,
+  GestaoRoute: GestaoRoute,
+  GuiasRoute: GuiasRoute,
+  MarketingRoute: MarketingRoute,
+  MinhaDriRoute: MinhaDriRoute,
+  OportunidadesRoute: OportunidadesRoute,
+  PrivacidadeRoute: PrivacidadeRoute,
+  QuizRoute: QuizRoute,
+  SobreRoute: SobreRoute,
+  OportunidadesIdRoute: OportunidadesIdRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
